@@ -2,14 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SSTERMINAL</title>
+  <title>Big Clickable Boxes</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+    .box {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .left {
+      background: #0077cc;
+    }
+    .left:hover {
+      background: #005fa3;
+    }
+    .right {
+      background: #e67e22;
+    }
+    .right:hover {
+      background: #cc650f;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Static Page</h1>
-  <p>Here are two useful links:</p>
-  <ul>
-    <li><a href="https://test.bestattungsplaner.at/home">First Link</a></li>
-    <li><a href="https://test-meine.wienenergie.at">Second Link</a></li>
-  </ul>
+  <a href="https://test.bestattungsplaner.at/home" class="box left">
+    First Link
+  </a>
+  <a href="https://test-meine.wienenergie.at" class="box right">
+    Second Link
+  </a>
 </body>
 </html>

@@ -2,45 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Big Clickable Boxes</title>
+  <title>Clickable Boxes</title>
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      display: flex;
       font-family: Arial, sans-serif;
-    }
-    .box {
-      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 2rem;
-      font-weight: bold;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px; /* space between boxes */
+    }
+
+    .box {
+      width: 250px;
+      height: 150px;
+      background-color: #0077cc;
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s;
+      border-radius: 12px;
+      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    .left {
-      background: #0077cc;
+
+    .box:hover {
+      background-color: #005fa3;
+      transform: translateY(-5px);
     }
-    .left:hover {
-      background: #005fa3;
+
+    .box.right {
+      background-color: #e67e22;
     }
-    .right {
-      background: #e67e22;
-    }
-    .right:hover {
-      background: #cc650f;
+
+    .box.right:hover {
+      background-color: #cc650f;
     }
   </style>
 </head>
 <body>
-  <a href="https://test.bestattungsplaner.at/home" class="box left">
-    First Link
-  </a>
-  <a href="https://test-meine.wienenergie.at" class="box right">
-    Second Link
-  </a>
+  <div class="container">
+    <a href="https://test.bestattungsplaner.at/home" class="box">Service 1</a>
+    <a href="https://test-meine.wienenergie.at" class="box right">Service 2</a>
+  </div>
 </body>
 </html>
